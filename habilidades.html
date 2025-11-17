@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habilidades - Allan Giovanni</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER (mesmo visual do index) -->
+  <header>
+    <div class="header-main">
+      <div class="avatar-circle">
+        <img src="img/allan.jpg" alt="Foto de Allan Giovanni" />
+      </div>
+
+      <div class="header-text">
+        <h1>Habilidades Utilizadas no Projeto</h1>
+        <p>Resumo das tecnologias aplicadas neste portfólio</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cases.html">Cases</a>
+      <a href="habilidades.html">Habilidades</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="habilidades">
+      <h2>Stack utilizada</h2>
+      <p>
+        Este projeto utiliza HTML, CSS e JavaScript no frontend, além de PHP e MySQL no backend
+        para o formulário de contato e a área administrativa de gerenciamento de mensagens.
+      </p>
+
+      <div class="skills-grid">
+
+        <!-- HTML -->
+        <article class="skill-card">
+          <div class="skill-icon skill-html">
+            <img src="img/html-icon.png" alt="Logo HTML5" />
+          </div>
+          <h3>HTML</h3>
+          <ul>
+            <li>Estrutura semântica das páginas (<code>header</code>, <code>main</code>, <code>section</code>, <code>footer</code>).</li>
+            <li>Formulário de contato com campos de texto, e-mail e textarea.</li>
+            <li>Tabela para listagem de contatos na área administrativa.</li>
+            <li>Links de navegação entre as páginas do portfólio.</li>
+          </ul>
+        </article>
+
+        <!-- CSS -->
+        <article class="skill-card">
+          <div class="skill-icon skill-css">
+            <img src="img/css-icon.png" alt="Logo CSS3" />
+          </div>
+          <h3>CSS</h3>
+          <ul>
+            <li>Uso de variáveis CSS para paleta de cores e tipografia.</li>
+            <li>Layout responsivo com <code>flexbox</code> e media queries.</li>
+            <li>Estilização de cards (cases, formulário, área admin).</li>
+            <li>Efeitos de hover, sombras, bordas arredondadas e gradientes.</li>
+          </ul>
+        </article>
+
+        <!-- JavaScript -->
+        <article class="skill-card">
+          <div class="skill-icon skill-js">
+            <img src="img/js-icon.png" alt="Logo JavaScript" />
+          </div>
+          <h3>JavaScript</h3>
+          <ul>
+            <li>Destaque automático do link de navegação da página atual.</li>
+            <li>Envio assíncrono do formulário de contato via <code>fetch</code> para o backend em PHP.</li>
+            <li>Animação de entrada dos cards de cases com <code>IntersectionObserver</code>.</li>
+            <li>CRUD de contatos na área administrativa (listar, editar e excluir).</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Allan Giovanni — Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="https://github.com/R3KCERALN" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.instagram.com/allan_paes01/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

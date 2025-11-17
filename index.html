@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Allan Giovanni</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-main">
+      <div class="avatar-circle">
+        <img src="img/allan.jpg" alt="Foto de Allan Giovanni">
+      </div>
+
+      <div class="header-text">
+        <h1>Allan Giovanni</h1>
+        <p>Desenvolvedor Web Iniciante</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cases.html">Cases</a>
+      <a href="habilidades.html">Habilidades</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- APRESENTAÇÃO -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Olá! Meu nome é Allan Giovanni, sou desenvolvedor web em início de carreira 
+        e apaixonado pela criação de sites modernos, funcionais e profissionais. 
+        Estou sempre estudando novas tecnologias para evoluir meus projetos.
+      </p>
+    </section>
+
+    <!-- Formulário de contato -->
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <p>Preencha o formulário abaixo e retornarei em breve.</p>
+
+      <form id="form-contato">
+        <div>
+          <label for="nome">Nome completo</label><br>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div>
+          <label for="email">E-mail</label><br>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="telefone">Telefone (opcional)</label><br>
+          <input type="text" id="telefone" name="telefone">
+        </div>
+
+        <div>
+          <label for="mensagem">Mensagem</label><br>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+
+      <!-- Feedback visual atualizado pelo main.js -->
+      <p id="contato-status" class="status-mensagem"></p>
+    </section>
+  </main>
+
+  <!-- Rodapé e links sociais -->
+  <footer>
+    <p>© 2025 Allan Giovanni — Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="https://github.com/R3KCERALN" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.instagram.com/allan_paes01/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

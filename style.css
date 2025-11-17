@@ -1,0 +1,621 @@
+/* Paleta de cores – tema escuro preto + verde */
+:root {
+  --bg-page: #020617;   /* fundo geral quase preto (slate bem escuro) */
+  --bg-body: #020617;
+  --bg-card: #030712;   /* cards levemente mais claros que o fundo */
+  --text-main: #e5e7eb; /* cinza bem claro para texto principal */
+  --text-muted: #9ca3af;/* cinza médio para textos secundários */
+  --accent-pink: #22c55e;       /* verde principal (mantemos o nome da var por compatibilidade) */
+  --accent-pink-soft: #16a34a;  /* verde mais escuro, para gradientes e detalhes */
+  --accent-pill: #022c22;       /* fundo dos botões / nav pills */
+  --border-soft: #1f2937;       /* borda suave escura */
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Global */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(circle at top, #020617, #000000);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Limita o conteúdo no centro da tela */
+header,
+main,
+section,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+a {
+  color: var(--accent-pink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho */ 
+header {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  background: radial-gradient(circle at top left, #064e3b, #020617);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+/* layout interno do header */
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* bolinha da foto */
+.avatar-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, var(--accent-pink), var(--accent-pink-soft));
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* foto de perfil */
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* texto ao lado da foto */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--accent-pink);
+  font-weight: 700;
+}
+
+header p,
+.header-text p {
+  margin: 0.2rem 0 0;
+  color: var(--text-muted);
+}
+
+/* NAV */ 
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-pill);
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--accent-pink);
+  color: #020617;
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.45);
+  transform: translateY(-1px);
+}
+
+/* link ativo do menu (definido pelo JS) */
+nav a.nav-active {
+  background: var(--accent-pink);
+  color: #020617;
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.45);
+}
+
+/* Seção sobre */ 
+#sobre {
+  margin-top: 0.5rem;
+}
+
+#sobre h2 {
+  font-size: 1.5rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.5rem;
+}
+
+#sobre p {
+  color: var(--text-main);
+  max-width: 48rem;
+}
+
+/* Formulário de contato */ 
+#contato {
+  margin-top: 2.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+#contato h2 {
+  font-size: 1.4rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.35rem;
+}
+
+#contato > p {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+#form-contato div {
+  margin-bottom: 1rem;
+}
+
+#form-contato label {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+#form-contato input,
+#form-contato textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  border: 1.5px solid #111827;
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease, background 0.15s ease;
+}
+
+#form-contato input::placeholder,
+#form-contato textarea::placeholder {
+  color: #4b5563;
+}
+
+#form-contato textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  background: #020b11;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Botão principal */
+#form-contato button {
+  margin-top: 0.3rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #020617;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.5);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+#form-contato button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(34, 197, 94, 0.6);
+}
+
+/* Feedback visual do formulário de contato */
+.status-mensagem {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.status-mensagem.status-sucesso {
+  background-color: rgba(22, 163, 74, 0.08);
+  color: #4ade80;
+  border-color: #16a34a;
+}
+
+.status-mensagem.status-erro {
+  background-color: rgba(248, 113, 113, 0.08);
+  color: #fecaca;
+  border-color: #f97373;
+}
+
+/* LISTA DE CASES / CARD */ 
+#lista-cases {
+  margin-top: 1.5rem;
+}
+
+#lista-cases h2 {
+  font-size: 1.4rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.4rem;
+}
+
+#lista-cases > p {
+  color: var(--text-muted);
+  margin-bottom: 1.3rem;
+}
+
+/* Card do case */
+.case {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  padding: 1.3rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+/* estado inicial quando JS marca para observar */
+.case.case-observe {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* quando entra na tela (classe adicionada pelo JS) */
+.case.case-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.25s ease;
+}
+
+.case:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Área da imagem do case – com proporção fixa e recorte suave */
+.case-media {
+  width: 100%; 
+  border-radius: 12px;
+  background: radial-gradient(circle at top left, #064e3b, #020617);
+  overflow: hidden;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  max-height: 360px;
+}
+
+.case-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+/* Texto do case */
+.case-content h3 {
+  font-size: 1.2rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.4rem;
+}
+
+.case-content p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.case-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */ 
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(34, 197, 94, 0.4);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+footer ul {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+footer a {
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   EFEITO DE "APERTO"
+=========================== */ 
+.btn-press {
+  transform: scale(0.97);
+  box-shadow: none !important;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */ 
+@media (min-width: 768px) {
+  header,
+  main,
+  section,
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .case {
+    flex-direction: row;
+  }
+
+  .case-media {
+    flex: 1.2;
+  }
+
+  .case-content {
+    flex: 2;
+  }
+}
+
+/* ===========================
+   ADMIN - LISTA DE CONTATOS
+=========================== */
+#admin-contatos {
+  margin-top: 1.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+#admin-contatos h2 {
+  font-size: 1.4rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.4rem;
+}
+
+#admin-contatos > p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* tabela da área admin */
+.tabela-admin {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.tabela-admin thead {
+  background: #020b11;
+}
+
+.tabela-admin th,
+.tabela-admin td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabela-admin th {
+  font-weight: 600;
+  color: var(--accent-pink);
+}
+
+.tabela-admin tbody tr:hover {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* botões de ação na tabela */
+.tabela-admin button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.tabela-admin button:first-child {
+  background: linear-gradient(135deg, #064e3b, #16a34a);
+  color: #e5e7eb;
+}
+
+.tabela-admin button:last-child {
+  background: #7f1d1d;
+  color: #fee2e2;
+}
+
+/* formulário de edição na admin */
+#form-editar-contato {
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(34, 197, 94, 0.4);
+}
+
+#form-editar-contato div {
+  margin-bottom: 0.7rem;
+}
+
+#form-editar-contato label {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+#form-editar-contato input,
+#form-editar-contato textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1.5px solid #111827;
+  background: #020617;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+#form-editar-contato textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#form-editar-contato button[type="submit"] {
+  margin-top: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #020617;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.5);
+}
+
+/* ===========================
+   HABILIDADES
+=========================== */
+#habilidades {
+  margin-top: 1.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+#habilidades h2 {
+  font-size: 1.4rem;
+  color: var(--accent-pink);
+  margin-bottom: 0.5rem;
+}
+
+#habilidades > p {
+  color: var(--text-muted);
+  margin-bottom: 1.3rem;
+  max-width: 48rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.skill-card {
+  background: #020b11;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-soft);
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-card h3 {
+  font-size: 1.1rem;
+  color: var(--accent-pink);
+}
+
+.skill-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+/* "Ícones" das skills */
+.skill-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  background: #022c22;
+}
+
+.skill-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* cores de fundo dos círculos (leves variações por linguagem) */
+.skill-html {
+  background: radial-gradient(circle at top, #f97316, #7c2d12);
+}
+
+.skill-css {
+  background: radial-gradient(circle at top, #38bdf8, #0f172a);
+}
+
+.skill-js {
+  background: radial-gradient(circle at top, #eab308, #78350f);
+}

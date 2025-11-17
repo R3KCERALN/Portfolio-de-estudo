@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Contatos recebidos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER (mesmo visual do index) -->
+  <header>
+    <div class="header-main">
+      <div class="avatar-circle">
+        <img src="img/allan.jpg" alt="Foto de Allan Giovanni" />
+      </div>
+
+      <div class="header-text">
+        <h1>Área Administrativa</h1>
+        <p>Gerenciamento de contatos recebidos pelo site</p>
+      </div>
+    </div>
+
+    <!-- Esse menu só aparece dentro da página admin (acessada via URL direta) -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cases.html">Cases</a>
+      <a href="habilidades.html">Habilidades</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- LISTAGEM + EDIÇÃO -->
+    <section id="admin-contatos">
+      <h2>Contatos recebidos</h2>
+      <p>Aqui você pode visualizar, editar e excluir mensagens enviadas pelo formulário de contato.</p>
+
+      <table class="tabela-admin" id="tabela-contatos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Mensagem</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- linhas preenchidas pelo JS -->
+        </tbody>
+      </table>
+
+      <h3>Editar contato selecionado</h3>
+      <form id="form-editar-contato">
+        <input type="hidden" id="editar-id" name="id" />
+
+        <div>
+          <label for="editar-nome">Nome</label><br />
+          <input type="text" id="editar-nome" name="nome" required />
+        </div>
+
+        <div>
+          <label for="editar-email">E-mail</label><br />
+          <input type="email" id="editar-email" name="email" required />
+        </div>
+
+        <div>
+          <label for="editar-telefone">Telefone</label><br />
+          <input type="text" id="editar-telefone" name="telefone" />
+        </div>
+
+        <div>
+          <label for="editar-mensagem">Mensagem</label><br />
+          <textarea id="editar-mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Salvar alterações</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Allan Giovanni — Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="https://github.com/R3KCERALN" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.instagram.com/allan_paes01/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
