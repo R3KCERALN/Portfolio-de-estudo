@@ -15,7 +15,7 @@
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", sans-serif;
 }
 
-/* Global */ 
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Cabeçalho */ 
+/* Cabeçalho */
 header {
   margin-top: 1.25rem;
   margin-bottom: 1rem;
@@ -117,7 +117,7 @@ header p,
   color: var(--text-muted);
 }
 
-/* NAV */ 
+/* NAV */
 nav {
   margin-top: 1rem;
   display: flex;
@@ -150,7 +150,7 @@ nav a.nav-active {
   box-shadow: 0 6px 18px rgba(34, 197, 94, 0.45);
 }
 
-/* Seção sobre */ 
+/* Seção sobre */
 #sobre {
   margin-top: 0.5rem;
 }
@@ -166,7 +166,7 @@ nav a.nav-active {
   max-width: 48rem;
 }
 
-/* Formulário de contato */ 
+/* Formulário de contato */
 #contato {
   margin-top: 2.5rem;
   background: var(--bg-card);
@@ -270,7 +270,7 @@ nav a.nav-active {
   border-color: #f97373;
 }
 
-/* LISTA DE CASES / CARD */ 
+/* LISTA DE CASES / CARD */
 #lista-cases {
   margin-top: 1.5rem;
 }
@@ -320,7 +320,7 @@ nav a.nav-active {
 
 /* Área da imagem do case – com proporção fixa e recorte suave */
 .case-media {
-  width: 100%; 
+  width: 100%;
   border-radius: 12px;
   background: radial-gradient(circle at top left, #064e3b, #020617);
   overflow: hidden;
@@ -356,7 +356,7 @@ nav a.nav-active {
 
 /* ===========================
    RODAPÉ
-=========================== */ 
+=========================== */
 footer {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
@@ -380,7 +380,7 @@ footer a {
 
 /* ===========================
    EFEITO DE "APERTO"
-=========================== */ 
+=========================== */
 .btn-press {
   transform: scale(0.97);
   box-shadow: none !important;
@@ -388,7 +388,7 @@ footer a {
 
 /* ===========================
    RESPONSIVO
-=========================== */ 
+=========================== */
 @media (min-width: 768px) {
   header,
   main,
